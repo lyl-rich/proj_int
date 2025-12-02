@@ -2,15 +2,15 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title>Home</title>
+    <title>Imóveis - Home</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
   </head>
-  
   <body>
     <header>
-        <h1>Portal de Imóveis</h1>
+      <h1>Portal de Imóveis</h1>
     </header>
-    
+
     <nav>
       <a href="index.html">Home</a>
       <a href="login.html">Login</a>
@@ -20,17 +20,36 @@
       <a href="clientes.html">Clientes</a>
       <a href="leiloes.html">Leilões</a>
     </nav>
-    
+
     <section class="container">
-      <h2>Destaques</h2>
-      <div class="card">
+      <h2>Imóveis em Destaque</h2>
+
+      <div class="property-card">
+        <img src="https://via.placeholder.com/400x200" class="property-img" />
         <h3>Casa Moderna</h3>
-        <p>3 quartos — R$ 750.000</p>
+        <p>3 quartos • 2 banheiros • 150 m²</p>
+        <button>Adicionar aos Favoritos</button>
+        <div class="map">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://maps.google.com/maps?q=São Paulo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
       </div>
-      
-      <div class="card">
+
+      <div class="property-card">
+        <img src="https://via.placeholder.com/400x200" class="property-img" />
         <h3>Apartamento Central</h3>
-        <p>2 quartos — R$ 520.000</p>
+        <p>2 quartos • 1 banheiro • 80 m²</p>
+        <button>Adicionar aos Favoritos</button>
+        <div class="map">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://maps.google.com/maps?q=Rio de Janeiro&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
       </div>
     </section>
   </body>
