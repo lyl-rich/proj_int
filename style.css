@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background:#1e90ff;
+    background:#15317A;
     color:white;
     text-align:center;
     padding:25px
@@ -20,7 +20,7 @@ nav {
 nav a {
     margin-right:15px;
     text-decoration:none;
-    color:#1e90ff;
+    color:#15317A;
     font-weight:bold
 }
 
@@ -51,7 +51,7 @@ nav a:hover {
 }
 
 button {
-    background:#1e90ff;
+    background:#15317A;
     color:#fff;border:none;
     padding:10px 15px;
     border-radius:6px;
@@ -59,15 +59,15 @@ button {
 }
 
 button:hover {
-    background:#187bcd
+    background:#3151a1
 }
 
 .remove {
-    background:#d9534f
+    background:#b71813
 }
 
 .remove:hover {
-    background:#c9302c
+    background:#c2413d
 }
 /*__*/
 .property-card {
@@ -85,7 +85,7 @@ button:hover {
     border-radius: 10px;
 }
 .property-card button {
-    background: #1e90ff;
+    background: #15317A;
     color: #fff;
     border: none;
     padding: 12px 18px;
@@ -95,7 +95,7 @@ button:hover {
     margin-top: 10px;
 }
 .property-card button:hover {
-    background: #187bcd;
+    background: #3151a1;
 }
 
 .map {
