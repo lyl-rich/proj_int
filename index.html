@@ -2,13 +2,12 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title>Imóveis - Home</title>
+    <title>ImóveisP2 - Home</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Portal de Imóveis</h1>
+      <h1>Imóveis P2</h1>
     </header>
 
     <nav>
@@ -28,7 +27,7 @@
         <img src="https://via.placeholder.com/400x200" class="property-img" />
         <h3>Casa Moderna</h3>
         <p>3 quartos • 2 banheiros • 150 m²</p>
-        <button>Adicionar aos Favoritos</button>
+        <button id="btn-add-fav" onclick="clicar">Adicionar aos Favoritos</button>
         <div class="map">
           <iframe
             width="100%"
@@ -42,7 +41,7 @@
         <img src="https://via.placeholder.com/400x200" class="property-img" />
         <h3>Apartamento Central</h3>
         <p>2 quartos • 1 banheiro • 80 m²</p>
-        <button>Adicionar aos Favoritos</button>
+        <button id="btn-add-fav" onclick="clicar">Adicionar aos Favoritos</button>
         <div class="map">
           <iframe
             width="100%"
@@ -52,5 +51,6 @@
         </div>
       </div>
     </section>
+    <script src="main.js"></script>
   </body>
 </html>
