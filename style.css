@@ -5,10 +5,12 @@ body {
 }
 
 header {
-    background:#15317A;
-    color:white;
-    text-align:center;
-    padding:25px
+    background: #15317A;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
 }
 
 nav {
@@ -104,4 +106,38 @@ button:hover {
     margin-top: 15px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+
+/*Logo index*/
+.header-index {
+    justify-content: flex-start;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* outras páginas*/
+.header-interna {
+    justify-content: center; /* Centraliza o H1 */
+    position: relative;     /* Permite posicionar o logo de forma absoluta */
+}
+
+.logo-fixa {
+    position: absolute;
+    left: 5%; /* Mantém o logo no canto esquerdo */
+    height: 50px;  /* Ajuste o tamanho conforme sua logo */
+}
+
+.logo {
+    height: 50px; /* Tamanho do logo no index */
+}
+
+/* Ajuste para o H1 não colidir com o logo em telas pequenas */
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
