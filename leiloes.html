@@ -22,13 +22,30 @@
             <a href="leiloes.html">Leilões</a>
         </nav>
         
-        <section class="container">
-            <div class="card">
-            <h3>Casa Ampla - Leilão</h3>
-            <p>Lance inicial: R$ 250.000</p>
-            <button>Dar Lance</button>
-        </div>
-    </section>
-    <script src="main.js"></script>
-</body>
+        <section class="container" id="leilao-container">
+            <div class="card auction-card" data-id="leilao_1">
+                <h3>Casa Ampla - Centro</h3>
+                <p>Lance Inicial: <span class="lance-inicial">R$ 250.000,00</span></p>
+                <p class="lance-destaque">Lance Atual: <strong id="valor-leilao_1">R$ 250.000,00</strong></p>
+                
+                <div class="bid-controls">
+                    <input type="number" id="input-leilao_1" placeholder="Digite seu lance (ex: 260000)">
+                    <button class="btn-lance">Dar Lance</button>
+                </div>
+            </div>
+
+            <div class="card auction-card" data-id="leilao_2">
+                <h3>Terreno Beira Mar</h3>
+                <p>Lance Inicial: <span class="lance-inicial">R$ 100.000,00</span></p>
+                <p class="lance-destaque">Lance Atual: <strong id="valor-leilao_2">R$ 100.000,00</strong></p>
+                
+                <div class="bid-controls">
+                    <input type="number" id="input-leilao_2" placeholder="Digite seu lance">
+                    <button class="btn-lance">Dar Lance</button>
+                </div>
+            </div>
+        </section>
+
+        <script src="main.js"></script>
+    </body>
 </html>
