@@ -100,11 +100,45 @@ if (location.pathname.includes("clientes.html")) {
     });
 }
 
-// ---------- DAR LANCE (leiloes.html) ----------
+// ---------- SISTEMA DE LEILÃO FUNCIONAL ----------
 if (location.pathname.includes("leiloes.html")) {
+    
+    // Função para carregar lances salvos ao abrir a página
+    const carregarLancesIniciais = () => {
+        const cards = document.querySelectorAll('.auction-card');
+        cards.forEach(card => {
+            const id = card.getAttribute('data-id');
+            const lanceSalvo = localStorage.getItem(id);
+            if (lanceSalvo) {
+                document.getElementById(`valor-${id}`).innerText = `R$ ${parseFloat(lanceSalvo).toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            }
+        });
+    };
+
+    carregarLancesIniciais();
+
+    // Evento de clique para dar lance
     document.addEventListener("click", function (e) {
-        if (e.target.innerText === "Dar Lance") {
-            alert("Seu lance foi registrado com sucesso!");
+        if (e.target.classList.contains("btn-lance")) {
+            const card = e.target.closest(".auction-card");
+            const id = card.getAttribute('data-id');
+            const inputLance = document.getElementById(`input-${id}`);
+            const valorInformado = parseFloat(inputLance.value);
+            
+            // Pega o valor atual do lance (remove o "R$" e pontos para comparar)
+            const elementoValorAtual = document.getElementById(`valor-${id}`);
+            const valorAtualTexto = elementoValorAtual.innerText.replace("R$", "").replace(/\./g, "").replace(",", ".");
+            const valorAtual = parseFloat(valorAtualTexto);
+
+            if (isNaN(valorInformado) || valorInformado <= valorAtual) {
+                alert("O seu lance deve ser MAIOR que o lance atual!");
+            } else {
+                // Sucesso: Salva no localStorage e atualiza a tela
+                localStorage.setItem(id, valorInformado);
+                elementoValorAtual.innerText = `R$ ${valorInformado.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+                inputLance.value = ""; // Limpa o campo
+                alert("Parabéns! Seu lance foi registrado como o maior até agora.");
+            }
         }
     });
 }
