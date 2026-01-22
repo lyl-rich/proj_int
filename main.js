@@ -77,7 +77,7 @@ if (location.pathname.includes("login.html")) {
 }
 
 // ---------- CADASTRO DE CLIENTE ----------
-if (location.pathname.includes("clientes.html")) {
+if (location.pathname.includes("cadastrar.html")) {
     const btnCadastrar = document.querySelector("button");
 
     btnCadastrar.addEventListener("click", () => {
